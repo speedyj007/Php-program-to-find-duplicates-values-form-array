@@ -1,0 +1,40 @@
+<?php
+$a = array("red", "blue", "red", "red" );
+
+foreach($a as $b )
+{
+	echo "<h1>".$b."<br></h1>";
+}
+echo "<hr>";
+
+echo "<h3>Number of Times Values repeated </h3><br>";
+
+$cnt_array = array_count_values($a);
+
+echo "<pre>";
+print_r($cnt_array);
+
+echo "<br><hr>";
+	
+$res = array();
+echo "<h2>Uniquie Values</h2><br>";	
+	
+	foreach($cnt_array as $key=>$val )
+	{
+		if($val == 1)
+		{		
+		$res[$key]	 = "unique";
+		
+	}
+	else{
+		$res[$key] = "duplicates Repeated ".$val." times";
+	}
+	
+	
+	}
+	print_r($res);
+	echo "<pre>";
+	
+	
+	
+?>
